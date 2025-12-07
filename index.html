@@ -500,6 +500,90 @@ background: linear-gradient(135deg, #FFD93D 0%, #FFC107 100%);
             color: #2D1B4E;
             font-weight: 900;
         }
+        /* ========== Section آراء الطلاب avec Scroll ========== */
+.testimonials-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+.testimonials-scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+
+.testimonials-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonials-grid {
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.testimonial-image {
+    min-width: 300px;
+    max-width: 300px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(255, 217, 61, 0.3);
+    border: 2px solid rgba(255, 217, 61, 0.4);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.testimonial-image:active {
+    transform: scale(0.98);
+}
+
+@media (min-width: 768px) {
+    .testimonial-image {
+        min-width: 350px;
+        max-width: 350px;
+    }
+}
+
+/* ========== Bouton WhatsApp à la Fin ========== */
+.whatsapp-container {
+    text-align: center;
+    margin: 30px 0 120px;
+}
+
+.whatsapp-float {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #FFFFFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 20px auto;
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+.whatsapp-icon {
+    font-size: 26px;
+}
+
+.whatsapp-label {
+    color: #FFD93D;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+}
 
         .pricing-section {
             max-width: 600px;
@@ -776,7 +860,27 @@ background: linear-gradient(135deg, #FFD93D 0%, #FFC107 100%);
         </div>
     </div>
 
+<div class="testimonials-section">
+    <h2 class="section-title animate-on-scroll fade-up">💬 آراء الطلاب</h2>
+    <p class="course-subtitle animate-on-scroll fade-up stagger-delay-1" style="text-align: center; margin-bottom: 30px;">
+        شوف ايش قالوا الطلاب عن الكورس
+    </p>
+    
+    <div class="testimonials-scroll-container">
+        <div class="testimonials-grid">
+            <img src="testimonial1.jpg" alt="رأي طالب 1" class="testimonial-image">
+            <img src="testimonial2.jpg" alt="رأي طالب 2" class="testimonial-image">
+            <img src="testimonial3.jpg" alt="رأي طالب 3" class="testimonial-image">
+            <img src="testimonial4.jpg" alt="رأي طالب 4" class="testimonial-image">
+            <img src="testimonial5.jpg" alt="رأي طالب 5" class="testimonial-image">
+            <img src="testimonial6.jpg" alt="رأي طالب 6" class="testimonial-image">
+        </div>
+    </div>
 
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="#register" class="cta-button animate-on-scroll bounce-in">🔘 احجز مقعدك الآن</a>
+    </div>
+</div>
 
 
     <div class="gift-box animate-on-scroll bounce-in">
@@ -864,6 +968,12 @@ background: linear-gradient(135deg, #FFD93D 0%, #FFC107 100%);
         
         <p style="margin-top: 20px; font-size: 14px; color: #FFD93D; font-weight: 700;">⏰ العرض ينتهي قريباً... لا تفوت الفرصة!</p>
     </div>
+<div class="whatsapp-container">
+    <a href="https://wa.me/message/NM3URLIEO45IG1" class="whatsapp-float" target="_blank" rel="noopener">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+    <p class="whatsapp-label">للاستفسارات</p>
+</div>
 
     <script>
         function updateCountdown() {
